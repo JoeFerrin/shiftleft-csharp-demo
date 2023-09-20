@@ -72,7 +72,7 @@ jobs:
         Expand-Archive -Path sl.zip -DestinationPath .
     - name: Validate Build Rules
       run: |
-        .\sl check-analysis --app GH-Qwiet-csharp-demo `
+        .\sl.exe check-analysis --app GH-Qwiet-csharp-demo `
             --github-pr-number=${{github.event.number}} `
             --github-pr-user=${{ github.repository_owner }} `
             --github-pr-repo=${{ github.event.repository.name }} `
