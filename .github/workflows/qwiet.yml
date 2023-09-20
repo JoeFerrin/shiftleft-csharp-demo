@@ -12,6 +12,8 @@ on:
     branches:
       - main
       - master
+    schedule:
+      - cron:  '30 4,16 * * *' #testing for 04:30 and 16:30 UTC = for 08:30 and 19:30 PST
 
 jobs:
   NextGen-Static-Analysis:
