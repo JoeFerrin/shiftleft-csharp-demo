@@ -73,14 +73,14 @@ jobs:
     - name: Validate Build Rules
       run: |
         .\sl.exe check-analysis --app GH-Qwiet-csharp-demo `
-            --github-pr-number=${{github.event.number}} `
-            --github-pr-user=${{ github.repository_owner }} `
-            --github-pr-repo=${{ github.event.repository.name }} `
-            --github-token=${{ secrets.GITHUB_TOKEN }}
+            # --github-pr-number=${{github.event.number}} `
+            # --github-pr-user=${{ github.repository_owner }} `
+            # --github-pr-repo=${{ github.event.repository.name }} `
+            # --github-token=${{ secrets.GITHUB_TOKEN }}
       env:
         SHIFTLEFT_ACCESS_TOKEN: ${{ secrets.SHIFTLEFT_ACCESS_TOKEN }}
         SHIFTLEFT_API_HOST: www.shiftleft.io
         SHIFTLEFT_GRPC_TELEMETRY_HOST: telemetry.shiftleft.io:443
         SHIFTLEFT_GRPC_API_HOST: api.shiftleft.io:443
-        PR_NUMBER: ${{ github.event.number }}
+        # PR_NUMBER: ${{ github.event.number }}
 
